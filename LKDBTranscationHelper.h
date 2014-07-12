@@ -5,12 +5,15 @@
 #import <Foundation/Foundation.h>
  
 #import "LKDBHelper.h"
+#import "NSObject+LKDBTranscationHelper.h"
 
 
-@interface LKDBTranscationHelper : LKDBHelper
+@interface LKDBHelper(LKDBTranscationHelper)
+ 
 
-
-
+@property(weak,nonatomic)FMDatabase* usingdb;
+@property(strong,nonatomic)FMDatabaseQueue* bindingQueue;
+ 
 - (BOOL)startTransaction;
 
 - (BOOL)commitTransaction;
