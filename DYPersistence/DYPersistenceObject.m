@@ -86,6 +86,21 @@
     return [[[self class] getUsingLKDBHelper] searchSingle:[self class] where:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:self.rowid],@"rowid", nil] orderBy:nil];
 }
 
+- (NSArray *)execQuery:(NSString *)sql{
+    DYPersistenceManager *manager = [DYPersistenceManager sharedManager];
+    return [manager execQuery:[self class] sql:sql];
+}
+
+- (id)execQuerySingle:(NSString *)sql{
+    DYPersistenceManager *manager = [DYPersistenceManager sharedManager];
+    NSArray *result =  [manager execQuery:[self class] sql:sql];
+    if(result.count>0){
+        return [result objectAtIndex:0];
+    }
+    
+    return nil;
+}
+
 
 + (NSArray *)list{
     return [[self class] searchWithWhere:nil];

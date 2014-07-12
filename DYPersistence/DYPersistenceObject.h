@@ -28,6 +28,10 @@
 + (id)loadByRowid:(int)_rowid;
 
 - (id)loadByRowid;
+
+- (NSArray *)execQuery:(NSString *)sql;
+
+- (id)execQuerySingle:(NSString *)sql;
  
 + (NSArray *)list;
 
