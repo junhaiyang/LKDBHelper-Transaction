@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
  
 
   s.name         = "LKDBHelper+Transaction"
-  s.version      = "1.0.1"
+  s.version      = "1.0.0"
   s.summary      = "LKDBHelper 添加事物批处理"
  
   s.homepage     = "https://github.com/junhaiyang/LKDBHelper-Transaction"
@@ -18,5 +18,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
    
   s.source_files = '*.{h,m,mm}'  
+  
+  s.dependency 'LKDBHelper'
 
 end
