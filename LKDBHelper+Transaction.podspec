@@ -20,20 +20,20 @@ Pod::Spec.new do |s|
   s.subspec 'Transaction' do |ds|
     
   	ds.source_files = '*.{h,m,mm}'   
+    ds.exclude_files = "MyTest.{h,m}" 
     		 
   end
   
   s.subspec 'DYPersistence' do |ds|
     
         ds.dependency 'LKDBHelper+Transaction/Transaction'
-  	     ds.source_files = 'DYPersistence/*.{h,m,mm}'   
+  	     ds.source_files = 'DYPersistence/*.{h,m,mm}'  
     		 
   end
    
   
   s.compiler_flags = '-w'
   
-  s.exclude_files = "MyTest.{h,m}"
   
   s.dependency 'LKDBHelper'
 
