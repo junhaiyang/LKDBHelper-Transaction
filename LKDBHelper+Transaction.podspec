@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name         = "LKDBHelper+Transaction"
   s.version      = "1.0.3"
-  s.summary      = "LKDBHelper 扩展修改了一下，简化表创建"
+  s.summary      = "LKDBHelper 扩展修改了一下，简化使用方式"
  
   s.homepage     = "https://github.com/junhaiyang/LKDBHelper-Transaction"
  

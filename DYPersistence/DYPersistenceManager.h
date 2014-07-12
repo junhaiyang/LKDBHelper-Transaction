@@ -13,6 +13,12 @@
 @interface DYPersistenceManager : NSObject
  
 + (DYPersistenceManager *)sharedManager;
+
+- (BOOL)startTransaction;
+
+- (BOOL)commitTransaction;
+
+- (BOOL)rollbackTransaction;
    
 - (BOOL)execSQL:(NSString *)sql;
 
