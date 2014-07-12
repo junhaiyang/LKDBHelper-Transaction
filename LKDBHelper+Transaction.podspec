@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
  
 
   s.name         = "LKDBHelper+Transaction"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "LKDBHelper 扩展修改了一下，简化表创建"
  
   s.homepage     = "https://github.com/junhaiyang/LKDBHelper-Transaction"
@@ -13,11 +13,23 @@ Pod::Spec.new do |s|
   s.author             = { "yangjunhai" => "junhaiyang@gmail.com" } 
   s.ios.deployment_target = "6.0" 
   
-  s.source = { :git => 'https://github.com/junhaiyang/LKDBHelper-Transaction.git' , :tag => '1.0.2'} 
+  s.source = { :git => 'https://github.com/junhaiyang/LKDBHelper-Transaction.git' , :tag => '1.0.3'} 
  
   s.requires_arc = true
+  
+  s.subspec 'Transaction' do |ds|
+    
+  	ds.source_files = '*.{h,m,mm}'   
+    		 
+  end
+  
+  s.subspec 'DYPersistence' do |ds|
+    
+        ds.dependency 'LKDBHelper+Transaction/Transaction'
+  	     ds.source_files = 'DYPersistence/*.{h,m,mm}'   
+    		 
+  end
    
-  s.source_files = '*.{h,m,mm}'  
   
   s.compiler_flags = '-w'
   

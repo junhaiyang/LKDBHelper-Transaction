@@ -8,6 +8,7 @@
 
 #import "DYPersistenceManager.h"
 #import "LKDBTranscationHelper.h"
+#import "DYPersistenceObject.h"
 
 @implementation DYPersistenceManager
 
@@ -22,7 +23,7 @@
     });
     
     return sharedInstance;
-}
+} 
 
 
 - (BOOL)startTransaction{
@@ -38,7 +39,7 @@
 }
 
 - (BOOL)execSQL:(NSString *)sql{
-    return [[LKDBHelper getUsingLKDBHelper]  executeSQL:sql];
+    return [[LKDBHelper getUsingLKDBHelper]  executeSQL:sql arguments:nil];
 }
 
 - (NSInteger)insert:(DYPersistenceObject *)object{

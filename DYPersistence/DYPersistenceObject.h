@@ -3,13 +3,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LKDBTranscationHelper.h"
+#import "DYPersistenceManager.h"
 
 #ifndef DYDATABASE_VERSION
     #define DYDATABASE_VERSION 2
 #endif
 
-@interface DYPersistenceObject : NSObject
+@interface DYPersistenceObject : NSObject 
 
 /**
  +(void)load{

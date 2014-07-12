@@ -3,6 +3,7 @@
 //
 
 #import "DYPersistenceObject.h"
+#import "LKDBTranscationHelper.h"
 #import <objc/runtime.h>
 
 @implementation DYPersistenceObject
@@ -95,27 +96,41 @@
 }
 
 + (void)drop{
-    [[[self class] getUsingLKDBHelper] dropTableWithClass:[self class]];
+    
+    DYPersistenceManager *manager = [DYPersistenceManager sharedManager];
+    
+    [manager drop:[self class]];
+     
 }
 
 - (NSInteger)save{
     
+    DYPersistenceManager *manager = [DYPersistenceManager sharedManager];
+    
     if(self.rowid>0){
-        [self update];
+        [manager update:self];
     }else{
-        [self saveToDB];
+        [manager insert:self];
     }
     
     return self.rowid;
 }
 
 - (NSInteger)update{
-    [[[self class] getUsingLKDBHelper] updateToDB:self where:@{@"rowid":[NSNumber numberWithInt:self.rowid]}];
+    
+    DYPersistenceManager *manager = [DYPersistenceManager sharedManager];
+    
+    [manager update:self];
+    
     return self.rowid;
 }
 
 - (void)delete{
-    [self deleteToDB];
+    
+    DYPersistenceManager *manager = [DYPersistenceManager sharedManager];
+    
+    [manager delete:self];
+    
 }
 
 @end

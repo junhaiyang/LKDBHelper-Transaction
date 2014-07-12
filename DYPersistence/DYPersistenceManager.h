@@ -6,14 +6,15 @@
 //  Copyright (c) 2014年 soooner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h> 
+#import <Foundation/Foundation.h>
+#import "NSObject+LKModel.h"
 
 @class DYPersistenceObject;
 
 @interface DYPersistenceManager : NSObject
  
 + (DYPersistenceManager *)sharedManager;
-
+   
 - (BOOL)execSQL:(NSString *)sql;
 
 - (int)insert:(DYPersistenceObject *)object;

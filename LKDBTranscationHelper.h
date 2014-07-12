@@ -19,6 +19,15 @@
 - (BOOL)commitTransaction;
 
 - (BOOL)rollbackTransaction;
+
+
+-(NSMutableArray *)executeQuery:(NSString *)sql toClass:(Class)modelClass;
+
+
+-(NSMutableArray *)executeQuery:(NSString *)sql;
+
+
+- (NSMutableArray *)executeResult:(FMResultSet *)set Class:(Class)modelClass;
  
 
 @end
