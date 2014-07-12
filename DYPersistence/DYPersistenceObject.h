@@ -4,6 +4,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DYPersistenceManager.h"
+#import "LKDBTranscationHelper.h"
 
 #ifndef DYDATABASE_VERSION
     #define DYDATABASE_VERSION 2

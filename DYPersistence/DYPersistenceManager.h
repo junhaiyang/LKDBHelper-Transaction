@@ -6,8 +6,7 @@
 //  Copyright (c) 2014年 soooner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "NSObject+LKModel.h"
+#import <Foundation/Foundation.h> 
 
 @class DYPersistenceObject;
 
