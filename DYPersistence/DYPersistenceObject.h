@@ -32,9 +32,7 @@
  
 + (NSArray *)list;
 
-+ (int)count;
-
-+ (void)drop;
++ (int)count; 
 
 - (int)save;
 

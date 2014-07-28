@@ -7,10 +7,14 @@
 //
 
 #import "FMDatabaseQueue+Database.h"
+#import "FMDatabase.h"
 
 @implementation FMDatabaseQueue (Database)
 
 -(FMDatabase *)getDatabase{
+#if DEBUG
+    _db.traceExecution = YES;
+#endif
     return _db;
 }
 
