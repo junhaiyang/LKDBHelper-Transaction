@@ -48,7 +48,7 @@
 }
 
 - (NSInteger)update:(DYPersistenceObject *)object{
-    [[LKDBHelper getUsingLKDBHelper] updateToDB:self where:@{@"rowid":[NSNumber numberWithInt:object.rowid]}];
+    [[LKDBHelper getUsingLKDBHelper] updateToDB:object where:@{@"rowid":[NSNumber numberWithInt:object.rowid]}];
     return object.rowid;
 }
 
