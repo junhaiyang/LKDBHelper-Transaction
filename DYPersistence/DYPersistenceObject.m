@@ -84,13 +84,7 @@
 	}
     
     return ret;
-}
-
-//升级
-+(LKTableUpdateType)tableUpdateForOldVersion:(int)oldVersion newVersion:(int)newVersion
-{
-    return LKTableUpdateTypeDeleteOld;
-}
+} 
 
 
 + (id)loadByRowid:(int)_rowid{
