@@ -5,6 +5,7 @@
 #import "DYPersistenceObject.h"
 #import "LKDBTranscationHelper.h"
 #import <objc/runtime.h>
+#import "LKDB+Manager.h"
 
 #define DEFAULT_ERROR_TABLE_VERSION -1
 
@@ -203,7 +204,7 @@
     return theProps;
 }
 
-+ (NSMutableArray *)validateFields:(DYPersistenceObject *)class
++ (NSMutableArray *)validateFields:(Class *)class
 {
     // Recurse up the classes, but stop at NSObject. Each class only reports its own properties, not those inherited from its superclass
     
