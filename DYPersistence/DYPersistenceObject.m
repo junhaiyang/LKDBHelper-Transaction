@@ -22,6 +22,9 @@
     
 }
 
++(int)getTableVersion{
+    return 1;
+}
 
 + (void)registerTable{
 #if DEBUG
@@ -200,7 +203,7 @@
     return theProps;
 }
 
-+ (NSMutableArray *)validateFields:(Class)class
++ (NSMutableArray *)validateFields:(DYPersistenceObject *)class
 {
     // Recurse up the classes, but stop at NSObject. Each class only reports its own properties, not those inherited from its superclass
     
