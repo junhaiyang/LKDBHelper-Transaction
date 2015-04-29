@@ -20,11 +20,7 @@
         [self removePropertyWithColumnName:property];
     }
     
-}
-
-+(int)getTableVersion{
-    return 1;
-}
+} 
 
 + (void)registerTable{
 #if DEBUG
