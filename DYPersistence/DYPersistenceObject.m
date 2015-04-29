@@ -4,8 +4,7 @@
 
 #import "DYPersistenceObject.h"
 #import "LKDBTranscationHelper.h"
-#import <objc/runtime.h>
-#import "LKDB+Manager.h"
+#import <objc/runtime.h> 
 
 #define DEFAULT_ERROR_TABLE_VERSION -1
 
