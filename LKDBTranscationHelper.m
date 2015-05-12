@@ -34,7 +34,7 @@
     __block NSMutableArray* results = nil;
     [self executeDB:^(FMDatabase *db) {
         FMResultSet* set = [db executeQuery:executeSQL];
-        results = [self executeResult:set Class:modelClass];
+        results = [self executeResult:set Class:modelClass tableName:nil];
         [set close];
     }];
     return results;

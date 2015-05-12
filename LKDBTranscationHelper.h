@@ -27,7 +27,7 @@
 -(NSMutableArray *)executeQuery:(NSString *)sql;
 
 
-- (NSMutableArray *)executeResult:(FMResultSet *)set Class:(Class)modelClass;
+- (NSMutableArray *)executeResult:(FMResultSet *)set Class:(Class)modelClass tableName:(NSString *)tableName;
  
 
 @end

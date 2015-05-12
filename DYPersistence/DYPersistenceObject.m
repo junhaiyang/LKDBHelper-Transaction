@@ -54,9 +54,6 @@
     }
     return YES;
 }
-+(int)getTableVersion{
-    return DEFAULT_ERROR_TABLE_VERSION;
-}
 
 #endif
 
@@ -219,14 +216,7 @@
         unsigned int outCount;
         
         propList = class_copyPropertyList(class, &outCount);
-        
-        int version  = [class getTableVersion];
-        if(version==DEFAULT_ERROR_TABLE_VERSION){
-            
-            NSMutableString *string=[[NSMutableString alloc] init];
-            [string appendString:@"表版本方法 +(int)getTableVersion  需要定义\n"];
-            [error addObject:string];
-        }
+         
         
         // Loop through properties and add declarations for the create
         for (int i=0; i < outCount; i++)
