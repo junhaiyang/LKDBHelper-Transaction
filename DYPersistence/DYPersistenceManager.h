@@ -6,7 +6,8 @@
 //  Copyright (c) 2014年 soooner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h> 
+#import <Foundation/Foundation.h>
+#import <objc/objc.h>
 
 @class DYPersistenceObject;
 
@@ -28,10 +29,10 @@
 
 - (void)delete:(DYPersistenceObject *)object;
 
-- (void)drop:(Class)class;
+- (void)drop:(Class)clazz;
 
 - (NSArray *)execQuery:(NSString *)sql;
 
-- (NSArray *)execQuery:(Class)class sql:(NSString *)sql;
+- (NSArray *)execQuery:(Class)clazz sql:(NSString *)sql;
 
 @end

@@ -57,17 +57,17 @@
 
 }
 
-- (void)drop:(Class)class{
-    [[LKDBHelper getUsingLKDBHelper] dropTableWithClass:class];
+- (void)drop:(Class)clazz{
+    [[LKDBHelper getUsingLKDBHelper] dropTableWithClass:clazz];
 }
 
 - (NSArray *)execQuery:(NSString *)sql{
     return [[LKDBHelper getUsingLKDBHelper]  executeQuery:sql];
 }
 
-- (NSArray *)execQuery:(Class)class sql:(NSString *)sql{ 
+- (NSArray *)execQuery:(Class)clazz sql:(NSString *)sql{ 
 
-    return [[LKDBHelper getUsingLKDBHelper]  executeQuery:sql toClass:class];
+    return [[LKDBHelper getUsingLKDBHelper]  executeQuery:sql toClass:clazz];
 }
 
 @end
