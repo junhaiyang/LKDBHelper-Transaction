@@ -15,6 +15,8 @@
  
 + (DYPersistenceManager *)sharedManager;
 
+//事物方法打算废弃，请使用其原始的方法   - (void)executeForTransaction:(BOOL (^)(LKDBHelper* helper))block;
+
 - (BOOL)startTransaction;
 
 - (BOOL)commitTransaction;
