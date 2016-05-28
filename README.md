@@ -1,4 +1,8 @@
 LKDBHelper-Transaction
+
+
+
+@Deprecated 使用新的方式 https://github.com/junhaiyang/LKDBSearchHelper.git
 ======================
 
 LKDBHelper 添加事物批处理
